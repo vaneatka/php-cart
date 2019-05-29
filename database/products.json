@@ -1,0 +1,48 @@
+[
+    {
+        "id"   : "p004",
+        "name" : "Мобильный телефон Apple iPhone 5S 16Gb Silver",
+        "photo": "images/1.jpg",
+        "price": {
+            "value":4674,
+            "currency": "MDL"
+        }
+    },
+    {
+        "id"   : "p005",
+        "name" : "Мобильный телефон Samsung SM-J510H Galaxy J5 Duos Black",
+        "photo": "images/2.jpg",
+        "price": {
+            "value":200,
+            "currency": "EUR"
+        }
+    },
+    {
+        "id"   : "p001",
+        "name" : "Мобильный телефон Samsung SM-J730F Galaxy J7 3Gb/16Gb Duos Black",
+        "photo": "images/3.jpg",
+        "price": {
+            "value":4355,
+            "currency": "MDL"
+        }
+    },
+    {   
+        "id"   : "p002",
+        "name" : "Мобильный телефон Nokia 230 Duos Dark Silver",
+        "photo": "images/4.jpg",
+        "price": {
+            "value":1241,
+            "currency": "MDL"
+        }
+    },
+    {
+        "id"   : "p003",
+        "name" : "Мобильный телефон Apple iPhone 7 32Gb Gold",
+        "photo": "images/5.jpg",
+        "price": {
+            "value":9772,
+            "currency": "MDL"
+        }
+    }
+    
+]
