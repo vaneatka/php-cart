@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <style>
 body{
     margin:50px;
@@ -55,7 +59,7 @@ img{
 <?php foreach($products as &$product){ ?>
     <div>
     <img src="<?php print $product["photo"] ?> " alt="photo">
-    <h2> <?php print $product["name"] ?>   <small><?php print $product["price"]["value"]." ".$product["price"]["currency"] ?>  </small> </h2>
-    <a href="add.php?pid=<?php print $product["id"]?>">++++</a>
+    <h2> <?php print $product["name"] ?>   <small><?php print $product["price"]["value"]." ".$product["price"]["currency"] ?>  </small> <a href="add.php?pid=<?php print $product["id"]?>">+</a> <a href="discard.php?pid=<?php print $product["id"]?>">-</a></h2>
+    
 </div>
 <?php   } ?>

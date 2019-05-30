@@ -1,8 +1,7 @@
 <?php 
-session_start();
+// session_start();
 
 $products_in_cart = $_SESSION['cart'] ?? [];
-
 
 ?>
 
