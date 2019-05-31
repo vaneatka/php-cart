@@ -5,4 +5,6 @@ $_SESSION['cart']=[];
 
 header("location: index.php");
 
+
+
 ?>

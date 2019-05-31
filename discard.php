@@ -9,7 +9,7 @@ header("location: index.php");
 if(in_array($pid, value_arr()) && $_SESSION['cart'][index()]['count']==1 ){
     array_slice($_SESSION['cart'][index()], 1);
 } else {
-    $_SESSION['cart'][index()]['count']--;
+    var_dump($_SESSION['cart'][index()]['count']);
     // var_dump($to_sess['id'], value_arr(), $index);
 }
 
