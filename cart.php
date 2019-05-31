@@ -16,6 +16,6 @@ $products_in_cart = $_SESSION['cart'] ?? [];
 <?php  }  else { ?>
     <h2>The cart is empty. 
 <?php }?>
-<hr>
+<!-- <hr>
 <?php var_dump($products_in_cart) ?>
-<hr>
+<hr> -->

@@ -2,22 +2,15 @@
 session_start();
 $pid = $_GET['pid'];
 
-// var_dump(value_arr());
-header("location: index.php");
+$val_arr = value_arr();
 
 
-if(in_array($pid, value_arr()) && $_SESSION['cart'][index()]['count']==1 ){
-    array_slice($_SESSION['cart'][index()], 1);
-} else {
-    var_dump($_SESSION['cart'][index()]['count']);
+if(in_array($pid, $val_arr) && $_SESSION['cart'][array_search($pid, $val_arr)]['count']==1 ){   
+    array_splice($_SESSION['cart'], array_search($pid, $val_arr),1);
+} else if(in_array($pid, $val_arr) && $_SESSION['cart'][array_search($pid, $val_arr)]['count']>1 ) {
+    $_SESSION['cart'][array_search($pid, $val_arr)]['count']--;
     // var_dump($to_sess['id'], value_arr(), $index);
 }
-
-function index(){
-    array_search($pid, value_arr());
-
-} 
-
 
 
 function value_arr(){
@@ -26,5 +19,10 @@ function value_arr(){
         array_push($values, $_SESSION['cart'][$key]['id']);
     }
     return $values;
-}
+};
+
+
+// var_dump($pid, $val_arr );
+header("location: index.php");
+
 ?>

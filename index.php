@@ -6,15 +6,19 @@ session_start();
 body{
     margin:50px;
 }
-div{
+.product{
     clear:both;
     border: 1px solid #8BB;
     padding: 20px;
     overflow:hidden;
     margin:5px;
+    width: 80%;
 }
 img{
     float:left;
+}
+.main{
+    display: flex;
 }
 
 </style>
@@ -55,11 +59,24 @@ img{
 
 <hr/>
 
-
+<div class="main">
+    <div class="cart">
 <?php foreach($products as &$product){ ?>
-    <div>
+    <div class="product">
     <img src="<?php print $product["photo"] ?> " alt="photo">
     <h2> <?php print $product["name"] ?>   <small><?php print $product["price"]["value"]." ".$product["price"]["currency"] ?>  </small> <a href="add.php?pid=<?php print $product["id"]?>">+</a> <a href="discard.php?pid=<?php print $product["id"]?>">-</a></h2>
     
 </div>
 <?php   } ?>
+</div>
+<div class="cart"> 
+<p>Cart</p>
+<?php if($_SESSION['cart']){ ?>
+<ul>
+    <?php   foreach($_SESSION['cart'] as $product){?>
+        <li><?php print $products[0]['id'] ?></li>
+    <?php }?>
+</ul>
+<?php }?>
+</div>
+</div>
